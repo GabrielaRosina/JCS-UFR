@@ -9,7 +9,7 @@ import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 public class DemoQA extends BasePage {
-
+    //Comentario
     private String btnElement = "//div/div[2]/div/div[1]/div/div[2]";
     private String btnWebTable = "//div[1]/div/ul/li[4][@id=\"item-3\"]";
     private String table1 = "/html/body/div[2]/div/div/div[2]/div[2]/div[2]/div[3]/div[1]/div[2]";
