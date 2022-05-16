@@ -1,0 +1,43 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+    //////////implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.13.0'
+    // https://mvnrepository.com/artifact/io.cucumber/cucumber-java
+    /////////implementation group: 'io.cucumber', name: 'cucumber-java', version: '5.3.0'
+    // https://mvnrepository.com/artifact/junit/junit
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+    // https://mvnrepository.com/artifact/io.cucumber/cucumber-junit
+    /////////testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '5.3.0'
+    // https://mvnrepository.com/artifact/com.aventstack/extentreports-cucumber4-adapter
+    ///////implementation group: 'com.aventstack', name: 'extentreports-cucumber6-adapter', version: '1.0.7'
+    ////////////////////////
+    // https://mvnrepository.com/artifact/io.cucumber/cucumber-java
+    implementation group: 'io.cucumber', name: 'cucumber-java', version: '6.11.0'
+    testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '6.11.0'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+
+    // https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber6-adapter
+    implementation 'tech.grasshopper:extentreports-cucumber6-adapter:2.9.0'
+    implementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.25'
+
+
+
+
+}
+
+test {
+    //useJUnitPlatform()
+    systemProperty "cucumber.options" , System.getProperty("cucumber.options")
+}
